@@ -14,12 +14,9 @@ module.exports = function(aws, options) {
         options.delay = 0;
     }
 
-    ALY.config.update({
-        accessKeyId: aws.key,
-        secretAccessKey: aws.secret
-    });
-
     var oss = new ALY.OSS({
+        accessKeyId: aws.key,
+        secretAccessKey: aws.secret,
         endpoint: aws.endpoint,
         apiVersion: '2013-10-15'
     });
