@@ -30,6 +30,7 @@ gulp.src('./**/*.js')
       ServerSideEncryption: '',
       Expires: ''
     },
-    uploadPath: 'assets/js/'
+    uploadPath: 'assets/js/',
+    maxRetry: 3         //上传重试次数，默认3次
   }));
 ```
